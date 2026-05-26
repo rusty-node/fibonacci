@@ -1,6 +1,6 @@
 {
   "name": "@rusty-maths/fibonacci",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Fibonacci native addon for Node.js (napi-rs), prebuilt for all common Linux targets",
   "main": "index.js",
   "types": "index.d.ts",

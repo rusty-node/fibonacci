@@ -1,0 +1,1 @@
+for dir in npm/*/; do (cd "$dir" && npm publish --access public); done
