@@ -1,0 +1,69 @@
+{
+  "name": "@rusty-maths/fibonacci",
+  "version": "0.1.0",
+  "description": "Fibonacci native addon for Node.js (napi-rs), prebuilt for all common Linux targets",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rusty-maths/fibonacci.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "fibonacci",
+    "napi-rs",
+    "napi",
+    "native",
+    "rust",
+    "node-addon"
+  ],
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "napi": {
+    "binaryName": "napi-fibonacci",
+    "targets": [
+      "x86_64-unknown-linux-gnu",
+      "x86_64-unknown-linux-musl",
+      "aarch64-unknown-linux-gnu",
+      "aarch64-unknown-linux-musl",
+      "armv7-unknown-linux-gnueabihf",
+      "armv7-unknown-linux-musleabihf",
+      "riscv64gc-unknown-linux-gnu",
+      "riscv64gc-unknown-linux-musl",
+      "s390x-unknown-linux-gnu",
+      "powerpc64le-unknown-linux-gnu"
+    ]
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "node --test",
+    "version": "napi version"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^3.2.0"
+  },
+  "optionalDependencies": {
+    "@rusty-maths/fibonacci-linux-x64-gnu": "0.1.0",
+    "@rusty-maths/fibonacci-linux-x64-musl": "0.1.0",
+    "@rusty-maths/fibonacci-linux-arm64-gnu": "0.1.0",
+    "@rusty-maths/fibonacci-linux-arm64-musl": "0.1.0",
+    "@rusty-maths/fibonacci-linux-arm-gnueabihf": "0.1.0",
+    "@rusty-maths/fibonacci-linux-arm-musleabihf": "0.1.0",
+    "@rusty-maths/fibonacci-linux-riscv64-gnu": "0.1.0",
+    "@rusty-maths/fibonacci-linux-riscv64-musl": "0.1.0",
+    "@rusty-maths/fibonacci-linux-s390x-gnu": "0.1.0",
+    "@rusty-maths/fibonacci-linux-ppc64-gnu": "0.1.0"
+  }
+}

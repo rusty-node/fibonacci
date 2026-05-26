@@ -1,0 +1,21 @@
+[package]
+name = "napi-fibonacci"
+version = "0.1.0"
+edition = "2021"
+description = "Fibonacci function as a Node.js native addon (napi-rs)"
+license = "MIT"
+repository = "https://github.com/rusty-maths/fibonacci"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = "3.0.0"
+napi-derive = "3.0.0"
+
+[build-dependencies]
+napi-build = "2"
+
+[profile.release]
+lto = true
+strip = "symbols"
